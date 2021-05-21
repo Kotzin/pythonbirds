@@ -13,6 +13,10 @@ class Pessoa:
     def metodo_estatico():
         return 42
 
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos: {cls.olhos}'
+
 
 if __name__ == '__main__':
     rafael = Pessoa(nome='Rafael')
@@ -32,3 +36,5 @@ if __name__ == '__main__':
     print(Pessoa.olhos)
     print(rafael.olhos)
     print(icaro.olhos)
+
+    print(Pessoa.nome_e_atributos_de_classe())
